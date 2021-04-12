@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 class App extends React.Component{
     /*
@@ -23,9 +24,17 @@ class App extends React.Component{
         isLoading: true,
         movies: [] // 처음에 선언하는 것이 필수는 아님
     }
+    /*
+     axios는 느리기 때문에 componentDidMount가 끝날때까지 시간이 걸릴 수 있다고 말해야함
+     & 우리는 그걸 기다려야하기 때문에 async - await 붙여줌 (이것이 비동기다!!)
+     */
+    getMovies = async () => {
+        // axios => fetch위에 있는 작은 layer와 같음
+        // 참고 : https://github.com/serranoarevalo/yts-proxy
+        const movies = await axios.get('https://yts-proxy.now.sh/list_movies.json');
+    }
     componentDidMount() { // component가 mount 되자마자 호출됨
-        setTimeout(() => {
-            this.setState({isLoading: false})}, 6000);
+        this.getMovies();
     }
 
     render() { // react는 자동적으로 class component의 render method를 실행함
