@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import Movie from './Movie';
+import './App.css'
 
 class App extends React.Component{
     /*
@@ -30,18 +32,35 @@ class App extends React.Component{
      */
     getMovies = async () => {
         // axios => fetch위에 있는 작은 layer와 같음
-        // 참고 : https://github.com/serranoarevalo/yts-proxy
-        const movies = await axios.get('https://yts-proxy.now.sh/list_movies.json');
+        /* 참고
+         https://github.com/serranoarevalo/yts-proxy
+         https://yts.mx/api#list_movies
+         */
+
+        // const movies = await axios.get('https://yts-proxy.now.sh/list_movies.json');
+        // console.log(movies.data.data.movies);
+        // this.setState({movies:movies})
+        // es6 표현 익힐것! ㄴ> 위와 아래는 동일한 의미
+        const {data:{data:{movies}}} = await axios.get('https://yts-proxy.now.sh/list_movies.json');
+        this.setState({movies, isLoading: false});
     }
     componentDidMount() { // component가 mount 되자마자 호출됨
         this.getMovies();
     }
 
     render() { // react는 자동적으로 class component의 render method를 실행함
-        const { isLoading } = this.state;
+        const { isLoading, movies } = this.state;
         return (
-        <div>{isLoading ? 'Loading...' : 'We are ready!'}</div>
-        )
+        <section class="container">
+            {isLoading
+            ? (<div class="loader"><span class="loader__text">Loading...</span></div>)
+            : (<div class="movies">
+                {movies.map(movie => (
+                <Movie key={movie.id} id={movie.id} year={movie.year} title={movie.title} poster={movie.medium_cover_image} summary={movie.summary} />
+                ))}
+            </div>
+                )}
+        </section>);
     }
 }
 
