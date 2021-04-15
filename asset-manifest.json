@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/movie_app/static/css/main.a6fd9e67.chunk.css",
-    "main.js": "/movie_app/static/js/main.da3813cb.chunk.js",
-    "main.js.map": "/movie_app/static/js/main.da3813cb.chunk.js.map",
-    "runtime-main.js": "/movie_app/static/js/runtime-main.9ac0b8f1.js",
-    "runtime-main.js.map": "/movie_app/static/js/runtime-main.9ac0b8f1.js.map",
-    "static/js/2.d31dd5cb.chunk.js": "/movie_app/static/js/2.d31dd5cb.chunk.js",
-    "static/js/2.d31dd5cb.chunk.js.map": "/movie_app/static/js/2.d31dd5cb.chunk.js.map",
-    "index.html": "/movie_app/index.html",
-    "static/css/main.a6fd9e67.chunk.css.map": "/movie_app/static/css/main.a6fd9e67.chunk.css.map",
-    "static/js/2.d31dd5cb.chunk.js.LICENSE.txt": "/movie_app/static/js/2.d31dd5cb.chunk.js.LICENSE.txt"
+    "main.css": "/hemni28/movie_app/static/css/main.a6fd9e67.chunk.css",
+    "main.js": "/hemni28/movie_app/static/js/main.da3813cb.chunk.js",
+    "main.js.map": "/hemni28/movie_app/static/js/main.da3813cb.chunk.js.map",
+    "runtime-main.js": "/hemni28/movie_app/static/js/runtime-main.43415f1a.js",
+    "runtime-main.js.map": "/hemni28/movie_app/static/js/runtime-main.43415f1a.js.map",
+    "static/js/2.d31dd5cb.chunk.js": "/hemni28/movie_app/static/js/2.d31dd5cb.chunk.js",
+    "static/js/2.d31dd5cb.chunk.js.map": "/hemni28/movie_app/static/js/2.d31dd5cb.chunk.js.map",
+    "index.html": "/hemni28/movie_app/index.html",
+    "static/css/main.a6fd9e67.chunk.css.map": "/hemni28/movie_app/static/css/main.a6fd9e67.chunk.css.map",
+    "static/js/2.d31dd5cb.chunk.js.LICENSE.txt": "/hemni28/movie_app/static/js/2.d31dd5cb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9ac0b8f1.js",
+    "static/js/runtime-main.43415f1a.js",
     "static/js/2.d31dd5cb.chunk.js",
     "static/css/main.a6fd9e67.chunk.css",
     "static/js/main.da3813cb.chunk.js"
