@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 //state가 필요없는 경우에는 class component가 될 필요가 없고 function component로 충분
 function Movie({id, year, title, summary, poster, genres}){
     return <Link to={{
-                pathname: '/movie-detail',
+                pathname: `/movie/${id}`,
                 state: {
                     year,
                     title,

@@ -10,7 +10,7 @@ function App(){
             <Navigation />
             <Route path="/" exact={true} component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/movie-detail" component={Detail} />
+            <Route path="/movie/:id" component={Detail} />
         </HashRouter>;
 }
 // BrowserRouter도 사용할 수 있으나, github pages 설정시 번거로움이 있음
